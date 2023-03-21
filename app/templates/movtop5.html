@@ -1,0 +1,10 @@
+<h2>My Top 5 Favorite Movies</h2>
+<div class="container">
+    <div class="row">
+        {% for m in movies %}
+        <div class="col-6">
+            <h4>{{m.Title}}</h4>
+        </div>
+        {% endfor %}
+    </div>
+</div>
