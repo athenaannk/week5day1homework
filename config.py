@@ -1,6 +1,6 @@
 import os
 
-basedir=os.path.abs(os.path.dir(__name__))
+basedir=os.path.abspath(os.path.dirname(__name__))
 
 class Config():
     FLASK_APP = os.environ.get('FLASK_APP')

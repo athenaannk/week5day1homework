@@ -1,19 +1,12 @@
 from app import app
 
 
-@app.route('/home')
-def homePage():
-    return {
-        'Oh hello': 'Athena'
-    }
-@app.route('/')
-def landingPage():
-    return {
-        'Landing': 'Woo!'
-    }
+from flask import render_template
 
-@app.route('/test')
-def testPage():
-    return {
-        'test': 'test'
-    }   
+@app.route('/')
+def homePage():
+    return render_template('index.html')
+
+@app.route('/top5')
+def topPage():
+    return render_template('top5.html')
